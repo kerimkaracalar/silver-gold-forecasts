@@ -1,15 +1,41 @@
-import type { Metadata } from "next";
-import "./globals.css";
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-export const metadata: Metadata = {
-  title: "Emtia Öngörü — Altın & Gümüş Analiz",
-  description: "Altın ve gümüş için yapay zeka destekli kısa ve uzun vadeli öngörü paneli",
-};
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="tr">
-      <body>{children}</body>
-    </html>
-  );
-}
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
